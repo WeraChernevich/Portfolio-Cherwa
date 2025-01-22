@@ -1,0 +1,25 @@
+:root {
+	--container-width: 1200px;
+	--container-padding: 0 15px;
+
+	--font-main: "DM Sans", sans-serif;
+	--font-accent: "Poppins", sans-serif;
+	--font-titles: var(--font-accent);
+
+	--dark-bg: rgb(23, 23, 24);
+	--page-bg: rgba(255, 255, 255, 1);
+	--border: rgb(38, 41, 45);
+	--white: rgba(255, 255, 255, 1);
+	--text-color: rgb(0, 0, 0);
+	--link-indicator: rgb(92, 98, 236);
+
+
+    --laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+}
+
+.dark {
+    --page-bg: #252526;
+    --text-color: #fff;
+}

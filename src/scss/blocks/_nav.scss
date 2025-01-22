@@ -1,0 +1,43 @@
+.header__nav {
+}
+.nav {
+	font-size: 18px;
+}
+.nav__list {
+	display: flex;
+	align-items: center;
+	column-gap: 30px;
+}
+
+.nav__list li {
+	display: flex;
+	align-items: center;
+	font-family: var(--font-accent);
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.nav__list-link {
+	color: var(--white);
+	transition: opacity .2s ease-in;
+
+	&--active {
+		position: relative;
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			left: 0;
+			top: 100%;
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: var(--link-indicator);
+		}
+	}
+}
+
+.nav__list-link:hover {
+	opacity: .8;
+}
