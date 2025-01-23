@@ -1,27 +1,18 @@
-.title-1 {
-	margin: 1em 0 0.5em;
-	font-size: 38px;
-	font-weight: 700;
-	font-family: var(--font-titles);
+.title {
+	margin-bottom: 60px;
+	font-size: 60px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--link-indicator);
+    text-align: center;
 }
 
 .title-2 {
-	margin: 1em 0 0.5em;
-	font-size: 32px;
-	font-weight: 700;
-	font-family: var(--font-titles);
-}
-
-.title-3 {
-	margin: 1em 0 0.5em;
-	font-size: 26px;
-	font-weight: 700;
-	font-family: var(--font-titles);
-}
-
-.title-4 {
-	margin: 1em 0 0.5em;
-	font-size: 18px;
-	font-weight: 700;
-	font-family: var(--font-titles);
+	padding: 15px 20px 25px;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
 }

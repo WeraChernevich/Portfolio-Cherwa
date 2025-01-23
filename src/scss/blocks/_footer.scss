@@ -1,8 +1,9 @@
 .footer {
 	background-color: rgb(39, 39, 39);
-	padding: 50px 0;
+	padding: 30px 0;
 	font-size: 32px;
-    color: #fff;
+	color: #fff;
+	display: flex;
 
 	h1 {
 		font-size: 32px;
@@ -19,8 +20,27 @@
 	}
 }
 
-.footer__copyright {
-	padding: 10px 0;
-	font-size: 16px;
+.footer__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 20px;
+}
 
+.footer__social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+
+.footer__copyright {
+	font-size: 16px;
+	font-family: var(--font-main);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	letter-spacing: -0.03em;
 }

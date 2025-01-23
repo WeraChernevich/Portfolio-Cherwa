@@ -56,6 +56,11 @@ gulp.task('html:dev', function () {
 		.pipe(plumber(plumberNotify('HTML')))
 		.pipe(fileInclude(fileIncludeSetting))
 		.pipe(
+			replace(/<img(?:.|\n|\r)*?>/g, function(match) {
+				return match.replace(/\r?\n|\r/g, '').replace(/\s{2,}/g, ' ');
+			})
+		) //удаляет лишние пробелы и переводы строк внутри тега <img>
+		.pipe(
 			replace(
 				/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
 				'$1./$4$5$7$1'

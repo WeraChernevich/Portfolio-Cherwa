@@ -7,10 +7,31 @@
 .icon {
 	fill: transparent;
 	stroke: transparent;
-	width: 62px;
-	height: 62px;
+	width: 34px;
+	height: 34px;
 }
 
 .icon--logo {
 	fill: var(--white);
+	width: 80px;
+	height: 80px;
+}
+
+.icon--leetcode,
+.icon--stepik,
+.icon--codewars,
+.icon--github {
+	border-radius: 50%;
+	fill: var(--white);
+}
+
+.icon--stepik {
+	background-color: var(--white);
+}
+
+.icon--github-dark {
+	fill: var(--text-color);
+	width: 24px;
+	height: 24px;
+	
 }

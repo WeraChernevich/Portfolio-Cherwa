@@ -42,6 +42,10 @@
     margin-bottom: 40px;
     font-size: 18px;
     line-height: 130%;
+
+    & p + p {
+        padding: 20px;
+    }
 }
 
 .person__btn {
