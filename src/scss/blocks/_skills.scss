@@ -1,7 +1,3 @@
-.skills {
-    padding: 60px 30px;
-}
-
 .skills__wrapper {
     margin: 0 auto;
     max-width: 865px;
@@ -17,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .skills__frontend {
@@ -33,7 +30,7 @@
 
 .skills__beckend {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(9, 1fr); 
     gap: 25px;
 
     @include mobile {

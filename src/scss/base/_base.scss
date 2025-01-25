@@ -6,8 +6,10 @@
 // }
 
 html {
+	display: flex;
+	flex-direction: column;
 	scroll-behavior: smooth;
-	background-color: rgb(39, 39, 39);
+	background-color: var(--page-bg);
 	letter-spacing: -0.01em;
 	color: var(--text-color);
 }
@@ -38,4 +40,9 @@ pre.code {
 	background-color: #e9f1f6;
 	padding: 1rem;
 	border-radius: 4px;
+}
+
+.section {
+	margin: 0 auto;
+	padding: 60px 0;
 }

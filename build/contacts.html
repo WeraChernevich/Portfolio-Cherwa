@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Skills</title>
+		<title>Контакты</title>
 		<link rel="stylesheet" href="./css/main.css" />
 
 		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
@@ -22,30 +22,44 @@
 							</svg>
 						</a>
 					</div>
+
+					<button class="dark-mode-btn">
+						<picture>
+							<source srcset="./img/icons/sun.webp 1x, ./img/icons/sun@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/icons/sun.png 1x, ./img/icons/sun@2x.png 2x" type="image/png" />
+							<img src="./img/icons/sun.png" class="icon--sun" alt="sun" />
+						</picture>
+						<picture>
+							<source srcset="./img/icons/moon.webp 1x, ./img/icons/moon@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/icons/moon.png 1x, ./img/icons/moon@2x.png 2x" type="image/png" />
+							<img src="./img/icons/moon.png" class="icon--moon" alt="moon" />
+						</picture>
+					</button>
+
 					<nav class="header__nav nav">
 						<ul class="nav__list">
-							<li><a href="./../project.html" class="nav__list-link nav__list-link--active">Projects</a></li>
-							<li><a href="./../skills.html" class="nav__list-link">Skills</a></li>
-							<li><a href="./../contacts.html" class="nav__list-link">Contacts</a></li>
+							<li><a href="./../project.html" class="nav__list-link nav__list-link--active">Проекты</a></li>
+							<li><a href="./../skills.html" class="nav__list-link">Инструменты</a></li>
+							<li><a href="./../contacts.html" class="nav__list-link">Контакты</a></li>
 						</ul>
 					</nav>
-					<!-- <button class="mobile-nav-btn">
-                <div class="nav-icon"></div>
-            </button> -->
+					<button class="mobile-nav-btn">
+						<div class="nav-icon"></div>
+					</button>
 				</div>
 			</div>
 		</header>
 		<div class="mobile-nav">
 			<ul class="mobile-nav__list">
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="docs.html">Документация</a></li>
+				<li><a href="./../project.html">Проекты</a></li>
+				<li><a href="./../skills.html">Инструменты</a></li>
+				<li><a href="./../contacts.html">Контакты</a></li>
 			</ul>
 		</div>
-
 		<main class="section">
 			<div class="container">
 				<div class="contacts">
-					<h1 class="contacts__title title">Contacts</h1>
+					<h1 class="contacts__title title">Контакты</h1>
 					<div class="contacts__wrapper">
 						<ul class="contacts-list">
 							<li class="contscts-list__item">

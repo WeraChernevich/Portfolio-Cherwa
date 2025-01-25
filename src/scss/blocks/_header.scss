@@ -1,5 +1,5 @@
 .header {
-	background-color: var(--dark-bg);
+	background-color: var(--black);
 	padding: 0 20px ;
 	border-bottom: 1px solid var(--border);
 	font-family: var(--second-family);
@@ -9,7 +9,7 @@
 
 	&__row {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
 		gap: 40px;
 		row-gap: 20px;
@@ -17,8 +17,12 @@
 	}
 }
 
-// .header__nav {
-// 	@include tablet {
-// 		display: none;
-// 	}
-// }
+.header__nav {
+	@include tablet {
+		display: none;
+	}
+}
+
+.header__row-logo {
+	margin-right: auto;
+}

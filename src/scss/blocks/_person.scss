@@ -1,5 +1,5 @@
 .person {
-    background-color: var(--dark-bg);
+    background-color: var(--black);
     background-image: url('./../../img/Abstract.png');
 	background-repeat: no-repeat;
 	background-position: center;
@@ -10,6 +10,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    @include mobile {
+        min-height: 500px;
+    }
 }
 
 .person__wrapper {
@@ -27,6 +31,11 @@
     font-weight: 700;
     font-size: 60px;
     line-height: 140%;
+
+    @include tablet {
+        font-size: 2.125rem;
+    }
+
 }
 
 .person__title span:nth-child(2) {
@@ -36,15 +45,29 @@
     line-height: 140%;
     color: var(--link-indicator);
 
+    @include tablet {
+        font-size: 2.125rem;
+    }
+
 }
 
 .person__desc {
-    margin-bottom: 40px;
-    font-size: 18px;
+    margin-bottom: 2.5rem;
+    font-size: 1.125rem;
     line-height: 130%;
 
     & p + p {
-        padding: 20px;
+        padding: 1.25rem;
+    }
+
+    @include mobile {
+        font-size: .75rem;
+        line-height: 1.2;
+        margin-bottom: 1.25rem;
+
+        & p + p {
+            padding: 0.625rem;
+        }
     }
 }
 
