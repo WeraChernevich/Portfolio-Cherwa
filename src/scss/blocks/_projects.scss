@@ -18,6 +18,9 @@
 }
 
 .projects__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: var(--project-card-bg);
     border-radius: 10px;
     box-shadow: var(--box-shadow);

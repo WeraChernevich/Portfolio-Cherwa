@@ -1,0 +1,30 @@
+<header class="header">
+    <div class="container">
+        <div class="header__row">
+            <div class="header__row-logo">
+                <a href="./../index.html" class="logo">
+                    <svg class="icon icon--logo">
+                        <use href="./img/svgsprite/sprite.symbol.svg#logo"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <button class="dark-mode-btn">
+                <img src="./../../img/icons/sun.png" class="icon--sun" alt="sun">
+                <img src="./../../img/icons/moon.png" class="icon--moon" alt="moon">
+            </button>
+
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li><a href="./../project.html" class="nav__list-link">Проекты</a></li>
+                    <li><a href="./../skills.html" class="nav__list-link nav__list-link--active">Skills</a></li>
+                    <li><a href="./../contacts.html" class="nav__list-link">Контакты</a></li>          
+                </ul>
+            </nav>
+            <button class="mobile-nav-btn">
+                <div class="nav-icon"></div>
+            </button>
+        </div>
+    </div>
+</header>
+@@include('mobile-nav.html')

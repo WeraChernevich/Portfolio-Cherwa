@@ -1,4 +1,4 @@
-.contacts-list {
+.contacts {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,14 +6,23 @@
     gap: 40px;
 }
 
-.contscts-list__item {
+.contacts__desc {
+    margin-bottom: 2.5rem;
+    font-size: 1.125rem;
+    line-height: 130%;
 
     & p + p {
-        margin-top: .5em;
+        padding: 1.25rem;
     }
 
-    & a {
-        color: var(--link-indicator);
+    @include mobile {
+        font-size: .75rem;
+        line-height: 1.2;
+        margin-bottom: 1.25rem;
+
+        & p + p {
+            padding: 0.625rem;
+        }
     }
+
 }
-
