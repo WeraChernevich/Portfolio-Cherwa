@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-angular-dims { width: 34px; height: 34px; }
+ .svg-codewars-dims { width: 800px; height: 800px; }
+ .svg-docker-dims { width: 34px; height: 34px; }
+ .svg-github-dims { width: 38px; height: 38px; }
+ .svg-github-dark-dims { width: 24px; height: 24px; }
+ .svg-gradle-dims { width: 34px; height: 34px; }
+ .svg-gulp-dims { width: 34px; height: 34px; }
+ .svg-hibernate-dims { width: 34px; height: 34px; }
+ .svg-html-5-dims { width: 25px; height: 34px; }
+ .svg-insomnia-dims { width: 34px; height: 34px; }
+ .svg-java-dims { width: 26px; height: 34px; }
+ .svg-js-dims { width: 34px; height: 34px; }
+ .svg-json-dims { width: 24px; height: 24px; }
+ .svg-kotlin-dims { width: 16px; height: 16px; }
+ .svg-kubernetes-dims { width: 34px; height: 34px; }
+ .svg-leetcode-dims { width: 800px; height: 800px; }
+ .svg-logo-dims { width: 90px; height: 19px; }
+ .svg-lua-dims { width: 16px; height: 16px; }
+ .svg-maven-dims { width: 34px; height: 34px; }
+ .svg-mongodb-dims { width: 40px; height: 42px; }
+ .svg-moon-dims { width: 16px; height: 16px; }
+ .svg-mysql-dims { width: 34px; height: 34px; }
+ .svg-nginx-dims { width: 34px; height: 34px; }
+ .svg-php-dims { width: 34px; height: 34px; }
+ .svg-postgresql-dims { width: 33px; height: 34px; }
+ .svg-python-dims { width: 16px; height: 16px; }
+ .svg-rabbitmq-dims { width: 34px; height: 34px; }
+ .svg-redis-dims { width: 40px; height: 34px; }
+ .svg-rest-api-dims { width: 34px; height: 34px; }
+ .svg-scss-dims { width: 34px; height: 34px; }
+ .svg-stepik-dims { width: 800px; height: 800px; }
+ .svg-sun-dims { width: 16px; height: 16px; }
+ .svg-telegram-dims { width: 24px; height: 24px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="angular">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#angular" class="svg-angular-dims" alt="angular">
+                    </div>
+                    <h2>angular, </h2>
+                </li>
+             <li title="codewars">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#codewars" class="svg-codewars-dims" alt="codewars">
+                    </div>
+                    <h2>codewars, </h2>
+                </li>
+             <li title="docker">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#docker" class="svg-docker-dims" alt="docker">
+                    </div>
+                    <h2>docker, </h2>
+                </li>
+             <li title="github">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#github" class="svg-github-dims" alt="github">
+                    </div>
+                    <h2>github, </h2>
+                </li>
+             <li title="github-dark">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#github-dark" class="svg-github-dark-dims" alt="github-dark">
+                    </div>
+                    <h2>github-dark, </h2>
+                </li>
+             <li title="gradle">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#gradle" class="svg-gradle-dims" alt="gradle">
+                    </div>
+                    <h2>gradle, </h2>
+                </li>
+             <li title="gulp">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#gulp" class="svg-gulp-dims" alt="gulp">
+                    </div>
+                    <h2>gulp, </h2>
+                </li>
+             <li title="hibernate">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#hibernate" class="svg-hibernate-dims" alt="hibernate">
+                    </div>
+                    <h2>hibernate, </h2>
+                </li>
+             <li title="html-5">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#html-5" class="svg-html-5-dims" alt="html-5">
+                    </div>
+                    <h2>html-5, </h2>
+                </li>
+             <li title="insomnia">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#insomnia" class="svg-insomnia-dims" alt="insomnia">
+                    </div>
+                    <h2>insomnia, </h2>
+                </li>
+             <li title="java">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#java" class="svg-java-dims" alt="java">
+                    </div>
+                    <h2>java, </h2>
+                </li>
+             <li title="js">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#js" class="svg-js-dims" alt="js">
+                    </div>
+                    <h2>js, </h2>
+                </li>
+             <li title="json">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#json" class="svg-json-dims" alt="json">
+                    </div>
+                    <h2>json, </h2>
+                </li>
+             <li title="kotlin">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#kotlin" class="svg-kotlin-dims" alt="kotlin">
+                    </div>
+                    <h2>kotlin, </h2>
+                </li>
+             <li title="kubernetes">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#kubernetes" class="svg-kubernetes-dims" alt="kubernetes">
+                    </div>
+                    <h2>kubernetes, </h2>
+                </li>
+             <li title="leetcode">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#leetcode" class="svg-leetcode-dims" alt="leetcode">
+                    </div>
+                    <h2>leetcode, </h2>
+                </li>
+             <li title="logo">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#logo" class="svg-logo-dims" alt="logo">
+                    </div>
+                    <h2>logo, </h2>
+                </li>
+             <li title="lua">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#lua" class="svg-lua-dims" alt="lua">
+                    </div>
+                    <h2>lua, </h2>
+                </li>
+             <li title="maven">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#maven" class="svg-maven-dims" alt="maven">
+                    </div>
+                    <h2>maven, </h2>
+                </li>
+             <li title="mongodb">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#mongodb" class="svg-mongodb-dims" alt="mongodb">
+                    </div>
+                    <h2>mongodb, </h2>
+                </li>
+             <li title="moon">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#moon" class="svg-moon-dims" alt="moon">
+                    </div>
+                    <h2>moon, </h2>
+                </li>
+             <li title="mysql">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#mysql" class="svg-mysql-dims" alt="mysql">
+                    </div>
+                    <h2>mysql, </h2>
+                </li>
+             <li title="nginx">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#nginx" class="svg-nginx-dims" alt="nginx">
+                    </div>
+                    <h2>nginx, </h2>
+                </li>
+             <li title="php">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#php" class="svg-php-dims" alt="php">
+                    </div>
+                    <h2>php, </h2>
+                </li>
+             <li title="postgresql">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#postgresql" class="svg-postgresql-dims" alt="postgresql">
+                    </div>
+                    <h2>postgresql, </h2>
+                </li>
+             <li title="python">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#python" class="svg-python-dims" alt="python">
+                    </div>
+                    <h2>python, </h2>
+                </li>
+             <li title="rabbitmq">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#rabbitmq" class="svg-rabbitmq-dims" alt="rabbitmq">
+                    </div>
+                    <h2>rabbitmq, </h2>
+                </li>
+             <li title="redis">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#redis" class="svg-redis-dims" alt="redis">
+                    </div>
+                    <h2>redis, </h2>
+                </li>
+             <li title="rest-api">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#rest-api" class="svg-rest-api-dims" alt="rest-api">
+                    </div>
+                    <h2>rest-api, </h2>
+                </li>
+             <li title="scss">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#scss" class="svg-scss-dims" alt="scss">
+                    </div>
+                    <h2>scss, </h2>
+                </li>
+             <li title="stepik">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#stepik" class="svg-stepik-dims" alt="stepik">
+                    </div>
+                    <h2>stepik, </h2>
+                </li>
+             <li title="sun">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#sun" class="svg-sun-dims" alt="sun">
+                    </div>
+                    <h2>sun, </h2>
+                </li>
+             <li title="telegram">
+                    <div class="icon-box">
+                        <img src="svg/sprite.stack.svg#telegram" class="svg-telegram-dims" alt="telegram">
+                    </div>
+                    <h2>telegram, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Fri, 31 Jan 2025 20:15:14 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>

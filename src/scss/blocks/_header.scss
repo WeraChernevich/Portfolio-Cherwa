@@ -1,0 +1,28 @@
+.header {
+	background-color: var(--black);
+	padding: 0 20px ;
+	border-bottom: 1px solid var(--border);
+	font-family: var(--second-family);
+	font-weight: 500;
+	font-size: 16px;
+	color: #fff;
+
+	&__row {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 40px;
+		row-gap: 20px;
+		flex-wrap: wrap;
+	}
+}
+
+.header__nav {
+	@include tablet {
+		display: none;
+	}
+}
+
+.header__row-logo {
+	margin-right: auto;
+}

@@ -1,0 +1,71 @@
+.icons-wrapper {
+	padding: 30px 0;
+	display: flex;
+	column-gap: 30px;
+}
+
+.icon {
+	fill: transparent;
+	stroke: transparent;
+	width: 34px;
+	height: 34px;
+
+	@include mobile {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.icon--logo {
+	fill: var(--white);
+	width: 80px;
+	height: 80px;
+
+	@include mobile {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.icon--sun,
+.icon--moon {
+	position: relative;
+}
+
+.icon--stepik,
+.icon--codewars,
+.icon--github {
+	fill: var(--white);
+	border-radius: 50%;
+	box-shadow: var(--box-shadow);
+}
+
+@keyframes animate {
+	from {
+		filter: hue-rotate(0deg);
+	}
+	to {
+		filter: hue-rotate(360deg);
+	}
+}
+
+.icon--stepik {
+	background-color: var(--white);
+}
+
+.icon--github-dark {
+	fill: var(--text-color);
+	width: 24px;
+	height: 24px;
+}
+
+.icon--skills {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	background: var(--icon-bg);
+	box-shadow: var(--box-shadow);
+}

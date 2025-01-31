@@ -1,0 +1,59 @@
+.title {
+    padding: 25px 0;
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--title);
+    text-align: center;
+
+    @include tablet {
+        font-size: 2.125rem;
+    }
+
+    @include mobile {
+        font-size: 1.5rem;
+        line-height: 1.1;
+    }
+}
+
+.title-2 {
+    padding: 0.9375rem 1.25rem 1.5625rem;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+
+    @include tablet {
+    }
+
+    @include mobile {
+        font-size: 1.25rem;
+        line-height: 1.2;
+        padding: 0.625rem 0.875rem 1rem;
+        letter-spacing: normal;
+    }
+}
+
+.title-3 {
+    padding: 0.9375rem 1.25rem 1.5625rem;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+    color: var(--text-color);
+
+    @include tablet {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    @include mobile {
+        font-size: 1.5rem;
+        line-height: 1.1;
+        padding: 0.5rem 0.75rem 1rem;
+        letter-spacing: normal;
+    }
+}

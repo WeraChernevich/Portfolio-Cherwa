@@ -1,0 +1,75 @@
+.person {
+    background-color: var(--black);
+    background-image: url('./../../img/Abstract.png');
+	background-repeat: no-repeat;
+	background-position: center;
+    color: var(--white);
+    min-height: 695px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include mobile {
+        min-height: 500px;
+    }
+}
+
+.person__wrapper {
+    padding: 0 15px;
+    max-width: 660px;
+}
+
+.person__title {
+    display: flex;
+    flex-direction: column;
+}
+
+.person__title span:nth-child(1) {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 140%;
+
+    @include tablet {
+        font-size: 2.125rem;
+    }
+
+}
+
+.person__title span:nth-child(2) {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 140%;
+    color: var(--link-indicator);
+
+    @include tablet {
+        font-size: 2.125rem;
+    }
+
+}
+
+.person__desc {
+    margin-bottom: 2.5rem;
+    font-size: 1.125rem;
+    line-height: 130%;
+
+    & p + p {
+        padding: 1.25rem;
+    }
+
+    @include mobile {
+        font-size: .75rem;
+        line-height: 1.2;
+        margin-bottom: 1.25rem;
+
+        & p + p {
+            padding: 0.625rem;
+        }
+    }
+}
+
+
+

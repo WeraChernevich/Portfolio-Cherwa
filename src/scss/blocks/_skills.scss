@@ -1,0 +1,39 @@
+.skills__wrapper {
+    margin: 0 auto;
+    max-width: 865px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills__item {
+    // padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.skills__frontend {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    @include mobile {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.skills__beckend {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); 
+    gap: 25px;
+
+    @include mobile {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

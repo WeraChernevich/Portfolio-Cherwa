@@ -1,0 +1,38 @@
+.projects {
+    padding: 60px 30px;
+}
+
+.projects__list {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.projects__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--project-card-bg);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.projects__item-img {
+    max-width: 370px;
+    height: auto;
+    border-radius: 10px;
+
+    @include mobile {
+        width: 250px;
+    }
+}
+
