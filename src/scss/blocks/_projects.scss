@@ -24,6 +24,12 @@
     background: var(--project-card-bg);
     border-radius: 10px;
     box-shadow: var(--box-shadow);
+
+}
+
+.projects__item--digital a img{
+    border-top: 30px solid white;
+    border-bottom: 30px solid white;
 }
 
 .projects__item-img {
